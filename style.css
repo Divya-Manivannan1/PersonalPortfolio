@@ -20,6 +20,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 ul {
   list-style-type: none;
   display: flex;
@@ -300,4 +303,39 @@ body {
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+.projects__card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.projects__card:hover {
+  box-shadow: 0 0 1rem 0 #3c3a3a;
+}
+.projects__image {
+  box-shadow: 0 -1rem 0 1rem #3c3a3a;
+}
+.projects__type {
+  font-family: "Source Sans 3", sans-serif;
+}
+.projects__skill {
+  text-transform: capitalize;
+  color: #011126;
+}
+.projects__description {
+  margin: 1rem 0;
+}
+.projects__nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
