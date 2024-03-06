@@ -1,4 +1,12 @@
+@import "./components/lists";
+@import "./components/links";
+@import "./components/buttons";
+@import "./components/headings";
+@import "./components/images";
+@import "./components/svg";
+
 @import "./base/base";
 @import "./layouts/header";
 @import "./layouts/intro";
-@import "./layouts/_about-me";
+@import "./layouts/about-me";
+@import "./layouts/skills";
