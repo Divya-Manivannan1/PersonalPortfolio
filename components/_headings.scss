@@ -1,0 +1,8 @@
+@import "../utils/functions";
+
+.subheading {
+  font-family: get-font("title");
+  font-size: 2rem;
+  color: get-color("heading");
+  font-weight: 700;
+}
