@@ -1,0 +1,57 @@
+@import "../utils/mixins";
+@import "../utils/functions";
+
+@import "../components/lists";
+@import "../components/links";
+@import "../components/buttons";
+
+.header {
+  @include create-flex($axis: row);
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  width: 100vw;
+
+  padding: get-spacing("margin");
+
+  background-color: get-color("accent-1");
+  color: get-color("background");
+
+  &__nav {
+    &:hover {
+      .header__list {
+        @include create-flex($axis: column, $gap: get-spacing("margin"));
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+  }
+
+  &__list {
+    display: none;
+
+    position: absolute;
+    width: 15ch;
+    right: get-spacing("margin");
+    padding: get-spacing("margin");
+
+    box-shadow: 0 0 5px 0 get-color("accent-2");
+    z-index: 1;
+
+    background-color: get-color("accent-2");
+  }
+
+  &__link,
+  &__button {
+    color: get-color("background");
+
+    &:hover {
+      color: get-color("background");
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@import "../utils/functions";
+
+.button {
+  padding: calc(get-spacing("margin") / 2);
+  border: 2px solid;
+  border-radius: get-spacing("margin");
+}

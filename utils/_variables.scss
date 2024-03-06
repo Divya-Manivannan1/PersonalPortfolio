@@ -1,2 +1,17 @@
-$default-spacing: 2rem;
-$default-margin: 1em;
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+$spacing: (
+  "default": 2rem,
+  "margin": 1rem,
+);
+
+$font: ("desc": '"Source Sans 3", sans-serif',
+"title": '"Lora", serif');
+
+$color: (
+  "background": #f2f2f2,
+  "text": #a1253b,
+  "heading": #011126,
+  "accent-1": #630008,
+  "accent-2": #3c3a3a,
+);

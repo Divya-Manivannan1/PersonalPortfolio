@@ -1,4 +1,5 @@
-@use "../utils/variables" as *;
+@import "../utils/functions";
+@import "../utils/mixins";
 
 * {
   padding: 0;
@@ -7,15 +8,16 @@
 }
 
 body {
-  font-family: $font-desc;
+  font-family: get-font("desc");
   font-weight: 500;
   font-size: 1.5rem;
-  padding-right: calc($default-spacing * 2);
-  padding-left: calc($default-spacing * 2);
-  background-color: $background-color;
-  color: $text-color;
-  display: flex;
-  flex-direction: column;
-  gap: calc($default-spacing * 3);
-  align-items: center;
+
+  padding-right: calc(get-spacing("default") * 2);
+  padding-left: calc(get-spacing("default") * 2);
+  width: 100vw;
+
+  background-color: get-color("background");
+  color: get-color("text");
+
+  @include create-flex($axis: column, $gap: calc(get-spacing("default") * 3));
 }
