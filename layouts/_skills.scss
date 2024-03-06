@@ -1,0 +1,37 @@
+@import "../utils/functions";
+@import "../utils/mixins";
+
+.skills {
+  @include create-flex($axis: column, $gap: calc(get-spacing("default") / 2));
+
+  width: 100%;
+
+  &__skill-icons {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    width: 100%;
+  }
+
+  &__icon {
+    text-align: center;
+    font-size: 0.75rem;
+    margin: calc(get-spacing("margin") / 2);
+  }
+
+  &__caption {
+    font-size: 2em;
+  }
+
+  // media querries for laptop
+
+  @media screen and (min-width: 768px) {
+    &__skill-icons {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__details {
+      max-width: 70ch;
+    }
+  }
+}

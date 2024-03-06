@@ -1,8 +1,6 @@
 @import "../utils/mixins";
 @import "../utils/functions";
 
-@import "../components/headings";
-
 .about-me {
   @include create-flex($axis: column, $gap: calc(get-spacing("default") / 2));
 
@@ -11,13 +9,16 @@
     background-image: url("./images/Profile-pic-2.jpg");
     background-size: 100%;
   }
+
   &__image {
     aspect-ratio: 960 / 1280;
-    transition: 0.5s;
     width: 100%;
-  }
-  &__image:hover {
-    opacity: 0;
+
+    transition: 0.5s;
+
+    &:hover {
+      opacity: 0;
+    }
   }
 
   // media querries for tablet
@@ -27,6 +28,7 @@
     grid-template: 1fr 1fr/ 2fr 3fr;
     grid-template-areas: "img subheading" "img details";
     gap: calc(get-spacing("default") * 3);
+
     &__image-container {
       grid-area: img;
     }

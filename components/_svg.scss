@@ -1,4 +1,7 @@
+@import "../utils/functions";
+
 svg {
-  fill: $text-color;
-  max-width: 7rem;
+  fill: get-color("text");
+  width: 7rem;
+  aspect-ratio: 1/1;
 }
