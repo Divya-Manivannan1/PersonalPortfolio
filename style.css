@@ -29,7 +29,7 @@ ul {
 }
 
 a {
-  text-decoration: inherit;
+  text-decoration: none;
   color: #3c3a3a;
   display: block;
 }
@@ -277,7 +277,7 @@ body {
   background-color: #630008;
   color: #f2f2f2;
   width: 100vw;
-  padding: 4rem;
+  padding: 3rem;
 }
 .footer__email {
   color: inherit;
@@ -288,8 +288,16 @@ body {
 .footer__svg {
   fill: #f2f2f2;
   width: 2rem;
-  height: 2rem;
 }
 .footer__svg--fill path {
   fill: #630008;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
 }/*# sourceMappingURL=style.css.map */
