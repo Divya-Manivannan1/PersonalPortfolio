@@ -1,0 +1,25 @@
+@import "../utils/mixins";
+@import "../utils/functions";
+@import "../components/headings";
+
+.intro {
+  @include create-flex($axis: column, $gap: calc(get-spacing("default") / 2));
+  align-items: flex-start;
+
+  font-family: get-font("desc");
+  font-style: italic;
+  font-weight: 600;
+
+  &__image {
+    display: none;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    color: get-color("heading");
+  }
+
+  &__line {
+    font-size: 3rem;
+  }
+}
