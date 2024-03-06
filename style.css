@@ -96,68 +96,6 @@ body {
   }
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  width: 100vw;
-  padding: 1rem;
-  background-color: #630008;
-  color: #f2f2f2;
-}
-.header__nav:hover .header__list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  align-items: flex-start;
-}
-.header__icon {
-  cursor: pointer;
-}
-.header__list {
-  display: none;
-  position: absolute;
-  width: 15ch;
-  right: 1rem;
-  padding: 1rem;
-  box-shadow: 0 0 5px 0 #3c3a3a;
-  z-index: 1;
-  background-color: #3c3a3a;
-}
-.header__link, .header__button {
-  color: inherit;
-}
-.header__link:hover, .header__button:hover {
-  color: inherit;
-}
-@media screen and (min-width: 768px) {
-  .header__icon {
-    display: none;
-  }
-  .header__list {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
-    position: unset;
-    width: unset;
-    right: unset;
-    padding: unset;
-    box-shadow: unset;
-    z-index: unset;
-    background-color: inherit;
-  }
-  .header__nav:hover .header__list {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
 .intro {
   display: flex;
   flex-direction: column;
@@ -378,5 +316,67 @@ body {
   }
   .projects__card:nth-of-type(8) {
     grid-area: card8;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  padding: 1rem;
+  background-color: #630008;
+  color: #f2f2f2;
+}
+.header__nav:hover .header__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  align-items: flex-start;
+}
+.header__icon {
+  cursor: pointer;
+}
+.header__list {
+  display: none;
+  position: absolute;
+  width: 15ch;
+  right: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 5px 0 #3c3a3a;
+  z-index: 1;
+  background-color: #3c3a3a;
+}
+.header__link, .header__button {
+  color: inherit;
+}
+.header__link:hover, .header__button:hover {
+  color: inherit;
+}
+@media screen and (min-width: 768px) {
+  .header__icon {
+    display: none;
+  }
+  .header__list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    position: unset;
+    width: unset;
+    right: unset;
+    padding: unset;
+    box-shadow: unset;
+    z-index: unset;
+    background-color: inherit;
+  }
+  .header__nav:hover .header__list {
+    flex-direction: row;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */
