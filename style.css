@@ -367,4 +367,16 @@ body {
   .projects__card:nth-of-type(6) {
     grid-area: card6;
   }
+}
+@media screen and (min-width: 1024px) {
+  .projects {
+    grid-template: 1fr 4fr 4fr/1fr 1fr 1fr 1fr;
+    grid-template-areas: "subheading subheading subheading subheading" "card1 card2 card3 card4" "card5 card6 card7 card8";
+  }
+  .projects__card:nth-of-type(7) {
+    grid-area: card7;
+  }
+  .projects__card:nth-of-type(8) {
+    grid-area: card8;
+  }
 }/*# sourceMappingURL=style.css.map */

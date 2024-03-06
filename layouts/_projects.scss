@@ -73,5 +73,17 @@
   // media querries for laptop
 
   @media screen and (min-width: 1024px) {
+    grid-template: 1fr 4fr 4fr/ 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "subheading subheading subheading subheading"
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+
+    &__card:nth-of-type(7) {
+      grid-area: card7;
+    }
+    &__card:nth-of-type(8) {
+      grid-area: card8;
+    }
   }
 }
