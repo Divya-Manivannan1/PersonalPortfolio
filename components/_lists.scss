@@ -1,0 +1,7 @@
+@import "../utils/mixins";
+@import "../utils/functions";
+
+ul {
+  list-style-type: none;
+  @include create-flex($gap: get-spacing("default"));
+}

@@ -1,0 +1,8 @@
+@import "./functions";
+
+@mixin create-flex($axis: row, $gap: get-spacing("default")) {
+  display: flex;
+  flex-direction: $axis;
+  gap: $gap;
+  align-items: center;
+}

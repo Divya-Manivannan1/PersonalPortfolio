@@ -1,0 +1,17 @@
+@import "../utils/mixins";
+@import "../utils/functions";
+
+a {
+  text-decoration: inherit;
+  color: get-color("accent-2");
+  display: block;
+}
+
+a:hover {
+  color: get-color("accent-1");
+  transform: scale(1.2);
+}
+
+a:active {
+  text-decoration: underline;
+}

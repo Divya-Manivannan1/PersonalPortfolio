@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+@function get-spacing($setting) {
+  @return map-get($spacing, $setting);
+}
+
+@function get-color($setting) {
+  @return map-get($color, $setting);
+}
+
+@function get-font($setting) {
+  @return map-get($font, $setting);
+}
