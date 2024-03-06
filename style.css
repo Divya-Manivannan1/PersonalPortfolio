@@ -33,6 +33,12 @@ body {
   gap: 6rem;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  body {
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
+}
 
 ul {
   list-style-type: none;
@@ -197,4 +203,23 @@ a:active {
 }
 .about-me__image:hover {
   opacity: 0;
+}
+@media screen and (min-width: 768px) {
+  .about-me {
+    display: grid;
+    grid-template: 1fr 1fr/2fr 3fr;
+    grid-template-areas: "img subheading" "img details";
+    gap: 6rem;
+  }
+  .about-me__image-container {
+    grid-area: img;
+  }
+  .about-me__subheading {
+    grid-area: subheading;
+    align-self: self-end;
+  }
+  .about-me__details {
+    grid-area: details;
+    align-self: self-start;
+  }
 }/*# sourceMappingURL=style.css.map */

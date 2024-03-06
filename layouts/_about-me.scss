@@ -19,4 +19,26 @@
   &__image:hover {
     opacity: 0;
   }
+
+  // media querries for tablet
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template: 1fr 1fr/ 2fr 3fr;
+    grid-template-areas: "img subheading" "img details";
+    gap: calc(get-spacing("default") * 3);
+    &__image-container {
+      grid-area: img;
+    }
+
+    &__subheading {
+      grid-area: subheading;
+      align-self: self-end;
+    }
+
+    &__details {
+      grid-area: details;
+      align-self: self-start;
+    }
+  }
 }
