@@ -22,9 +22,17 @@
     font-size: 2em;
   }
 
-  // media querries for laptop
+  // media querries for tablet
 
   @media screen and (min-width: 768px) {
+    &__skill-icons {
+      grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  // media querries for laptop
+
+  @media screen and (min-width: 1024px) {
     &__skill-icons {
       display: flex;
       justify-content: center;
