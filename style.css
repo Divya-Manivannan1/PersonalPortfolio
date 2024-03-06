@@ -75,7 +75,6 @@ a:active {
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  flex-direction: column;
   align-items: flex-start;
 }
 .header__icon {
@@ -94,6 +93,25 @@ a:active {
 .header__link, .header__button {
   color: #f2f2f2;
 }
-.header__link:hover, .header__button:hover {
-  color: #f2f2f2;
+@media screen and (min-width: 768px) {
+  .header__icon {
+    display: none;
+  }
+  .header__list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    position: unset;
+    width: unset;
+    right: right;
+    padding: unset;
+    box-shadow: unset;
+    z-index: unset;
+    background-color: inherit;
+  }
+  .header__nav:hover .header__list {
+    flex-direction: row;
+    align-items: center;
+  }
 }/*# sourceMappingURL=style.css.map */

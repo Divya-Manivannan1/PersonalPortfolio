@@ -22,7 +22,6 @@
     &:hover {
       .header__list {
         @include create-flex($axis: column, $gap: get-spacing("margin"));
-        flex-direction: column;
         align-items: flex-start;
       }
     }
@@ -49,9 +48,35 @@
   &__link,
   &__button {
     color: get-color("background");
+  }
 
-    &:hover {
-      color: get-color("background");
+  // media querries for tablet
+
+  @media screen and (min-width: 768px) {
+    &__icon {
+      display: none;
+    }
+
+    &__list {
+      @include create-flex($axis: row, $gap: get-spacing("margin"));
+
+      position: unset;
+      width: unset;
+      right: right;
+      padding: unset;
+
+      box-shadow: unset;
+      z-index: unset;
+      background-color: inherit;
+    }
+
+    &__nav {
+      &:hover {
+        .header__list {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
     }
   }
 }
