@@ -20,4 +20,11 @@ body {
   color: get-color("text");
 
   @include create-flex($axis: column, $gap: calc(get-spacing("default") * 3));
+
+  // media querries for tablet
+
+  @media screen and (min-width: 768px) {
+    padding-right: calc(get-spacing("default") * 4);
+    padding-left: calc(get-spacing("default") * 4);
+  }
 }
