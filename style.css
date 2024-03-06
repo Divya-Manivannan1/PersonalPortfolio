@@ -20,6 +20,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 ul {
   list-style-type: none;
   display: flex;
@@ -299,5 +302,81 @@ body {
     gap: 2rem;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+.projects__card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.projects__card:hover {
+  box-shadow: 0 0 1rem 0 #3c3a3a;
+}
+.projects__image {
+  box-shadow: 0 -1rem 0 1rem #3c3a3a;
+}
+.projects__type {
+  font-family: "Source Sans 3", sans-serif;
+}
+.projects__skill {
+  text-transform: capitalize;
+  color: #011126;
+}
+.projects__description {
+  margin: 1rem 0;
+}
+.projects__nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .projects {
+    display: grid;
+    grid-template: 1fr 4fr 4fr/1fr 1fr 1fr;
+    grid-template-areas: "subheading subheading subheading" "card1 card2 card3" "card4 card5 card6";
+  }
+  .projects__subheading {
+    grid-area: subheading;
+    text-align: center;
+  }
+  .projects__card:nth-of-type(1) {
+    grid-area: card1;
+  }
+  .projects__card:nth-of-type(2) {
+    grid-area: card2;
+  }
+  .projects__card:nth-of-type(3) {
+    grid-area: card3;
+  }
+  .projects__card:nth-of-type(4) {
+    grid-area: card4;
+  }
+  .projects__card:nth-of-type(5) {
+    grid-area: card5;
+  }
+  .projects__card:nth-of-type(6) {
+    grid-area: card6;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .projects {
+    grid-template: 1fr 4fr 4fr/1fr 1fr 1fr 1fr;
+    grid-template-areas: "subheading subheading subheading subheading" "card1 card2 card3 card4" "card5 card6 card7 card8";
+  }
+  .projects__card:nth-of-type(7) {
+    grid-area: card7;
+  }
+  .projects__card:nth-of-type(8) {
+    grid-area: card8;
   }
 }/*# sourceMappingURL=style.css.map */

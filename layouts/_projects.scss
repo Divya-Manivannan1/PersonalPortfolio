@@ -1,0 +1,89 @@
+@use "../utils/variables" as *;
+
+@import "../utils/mixins";
+@import "../utils/functions";
+
+.projects {
+  @include create-flex($axis: column, $gap: get-spacing("default") * 2);
+
+  &__card {
+    @include create-flex($axis: column, $gap: calc(get-spacing("margin") * 2));
+
+    &:hover {
+      box-shadow: 0 0 1rem 0 get-color("accent-2");
+    }
+  }
+
+  &__image {
+    box-shadow: 0 -1rem 0 1rem get-color("accent-2");
+  }
+
+  &__type {
+    font-family: $font-desc;
+  }
+
+  &__skill {
+    text-transform: capitalize;
+    color: get-color("heading");
+  }
+
+  &__description {
+    margin: get-spacing("margin") 0;
+  }
+
+  &__nav {
+    @include create-flex($gap: calc(get-spacing("default") / 2));
+  }
+
+  // media querries for tablet
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template: 1fr 4fr 4fr/ 1fr 1fr 1fr;
+    grid-template-areas:
+      "subheading subheading subheading"
+      "card1 card2 card3"
+      "card4 card5 card6";
+
+    &__subheading {
+      grid-area: subheading;
+      text-align: center;
+    }
+
+    &__card:nth-of-type(1) {
+      grid-area: card1;
+    }
+    &__card:nth-of-type(2) {
+      grid-area: card2;
+    }
+    &__card:nth-of-type(3) {
+      grid-area: card3;
+    }
+    &__card:nth-of-type(4) {
+      grid-area: card4;
+    }
+    &__card:nth-of-type(5) {
+      grid-area: card5;
+    }
+    &__card:nth-of-type(6) {
+      grid-area: card6;
+    }
+  }
+
+  // media querries for laptop
+
+  @media screen and (min-width: 1024px) {
+    grid-template: 1fr 4fr 4fr/ 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "subheading subheading subheading subheading"
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+
+    &__card:nth-of-type(7) {
+      grid-area: card7;
+    }
+    &__card:nth-of-type(8) {
+      grid-area: card8;
+    }
+  }
+}
