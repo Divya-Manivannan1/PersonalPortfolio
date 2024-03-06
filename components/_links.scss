@@ -2,7 +2,7 @@
 @import "../utils/functions";
 
 a {
-  text-decoration: inherit;
+  text-decoration: none;
   color: get-color("accent-2");
   display: block;
 }

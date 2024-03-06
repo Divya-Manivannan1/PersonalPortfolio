@@ -7,7 +7,3 @@
 @function get-color($setting) {
   @return map-get($color, $setting);
 }
-
-@function get-font($setting) {
-  @return map-get($font, $setting);
-}

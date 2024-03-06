@@ -1,0 +1,41 @@
+@import "../utils/functions";
+@import "../utils/mixins";
+
+.footer {
+  @include create-flex(
+    $axis: column-reverse,
+    $gap: calc(get-spacing("default") / 2)
+  );
+
+  background-color: get-color("accent-1");
+  color: get-color("background");
+
+  width: 100vw;
+  padding: calc(get-spacing("default") * 1.5);
+
+  &__email {
+    color: inherit;
+  }
+
+  &__email:hover {
+    color: get-color("background");
+  }
+
+  &__svg {
+    fill: get-color("background");
+    width: get-spacing("default");
+  }
+
+  &__svg--fill {
+    path {
+      fill: get-color("accent-1");
+    }
+  }
+
+  // media querries for tablet
+
+  @media screen and (min-width: 768px) {
+    @include create-flex();
+    justify-content: space-between;
+  }
+}

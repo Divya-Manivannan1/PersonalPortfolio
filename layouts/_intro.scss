@@ -1,11 +1,14 @@
+@use "../utils/variables" as *;
+
 @import "../utils/mixins";
 @import "../utils/functions";
+
 
 .intro {
   @include create-flex($axis: column, $gap: calc(get-spacing("default") / 2));
   align-items: flex-start;
 
-  font-family: get-font("desc");
+  font-family: $font-desc;
   font-style: italic;
   font-weight: 600;
 
