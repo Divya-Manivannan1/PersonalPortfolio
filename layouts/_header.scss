@@ -6,7 +6,7 @@
 @import "../components/buttons";
 
 .header {
-  @include create-flex($axis: row);
+  @include create-flex();
   justify-content: space-between;
 
   position: sticky;
