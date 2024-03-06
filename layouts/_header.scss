@@ -47,7 +47,10 @@
 
   &__link,
   &__button {
-    color: get-color("background");
+    color: inherit;
+    &:hover {
+      color: inherit;
+    }
   }
 
   // media querries for tablet

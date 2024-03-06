@@ -91,7 +91,10 @@ a:active {
   background-color: #3c3a3a;
 }
 .header__link, .header__button {
-  color: #f2f2f2;
+  color: inherit;
+}
+.header__link:hover, .header__button:hover {
+  color: inherit;
 }
 @media screen and (min-width: 768px) {
   .header__icon {
