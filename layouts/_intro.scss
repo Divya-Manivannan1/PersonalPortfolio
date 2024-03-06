@@ -22,4 +22,27 @@
   &__line {
     font-size: 3rem;
   }
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template: 1fr 3fr / 3fr 2fr;
+    grid-template-areas:
+      "name img"
+      "line1 img";
+    gap: 0;
+
+    &__image {
+      display: unset;
+      grid-area: img;
+    }
+
+    &__name {
+      grid-area: name;
+      align-self: self-end;
+    }
+
+    &__line {
+      grid-area: line1;
+    }
+  }
 }

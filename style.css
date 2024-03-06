@@ -148,4 +148,23 @@ a:active {
 }
 .intro__line {
   font-size: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .intro {
+    display: grid;
+    grid-template: 1fr 3fr/3fr 2fr;
+    grid-template-areas: "name img" "line1 img";
+    gap: 0;
+  }
+  .intro__image {
+    display: unset;
+    grid-area: img;
+  }
+  .intro__name {
+    grid-area: name;
+    align-self: self-end;
+  }
+  .intro__line {
+    grid-area: line1;
+  }
 }/*# sourceMappingURL=style.css.map */
